@@ -1,0 +1,51 @@
+.hero__section {
+  margin: 20px 0;
+}
+
+.image__container {
+  position: relative;
+}
+
+.image__container img {
+  max-width: 100%;
+}
+
+.intro__container {
+  z-index: 1;
+  background-color: var(--secondary-light-grey);
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.intro__container h1 {
+  color: var(--primary-grayish);
+  font-size: 3.46vw;
+  font-family: 'Ibarra Real Nova', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.intro__container button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .intro__container h1 {
+    margin-top: 20px;
+  }
+  .intro__container button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro__container h1 {
+    margin-top: 5px;
+  }
+}

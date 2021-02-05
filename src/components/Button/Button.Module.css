@@ -1,0 +1,74 @@
+.btn__primary {
+  width: 200px;
+  height: 48px;
+  background-color: var(--primary-blue);
+  position: relative;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  color: #fff;
+  align-items: center;
+  border: none;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.img__container {
+  background-color: var(--primary-grayish);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__primary:hover {
+  background-color: var(--primary-cyan);
+}
+
+.btn__primary:hover .img__container {
+  opacity: 0.3;
+}
+
+.btn__primary:disabled {
+  background-color: #b7b7b9;
+}
+.btn__primary:disabled .img__container {
+  opacity: 0.1;
+}
+
+/* secondary button  */
+
+.hide__img__container {
+  display: none;
+}
+
+.btn__secondary {
+  width: 200px;
+  height: 48px;
+  background-color: #fff;
+  border: 2px solid var(--primary-grayish);
+  font-family: 'Public Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--primary-grayish);
+  cursor: pointer;
+}
+
+.btn__secondary:hover {
+  background-color: var(--primary-grayish);
+  color: #fff;
+}
+
+.btn__secondary:hover a {
+  color: #fff;
+}
+
+.btn__secondary a {
+  width: 100%;
+  height: 100%;
+}
+
+.btn__secondary:disabled {
+  opacity: 0.3;
+}

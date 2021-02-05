@@ -1,0 +1,123 @@
+.card__container {
+  margin: 40px 0 20px;
+  position: relative;
+  display: flex;
+  justify-items: center;
+}
+
+.img__container {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 0 0;
+  width: 100%;
+}
+
+.img__container.second {
+  order: 1;
+}
+
+.img__container img {
+  width: 100%;
+}
+
+.text__container {
+  width: 80%;
+  border-top: 3px solid var(--secondary-grey);
+  border-bottom: 3px solid var(--secondary-grey);
+}
+
+.text__container button {
+  margin-bottom: 20px;
+}
+
+.text__container h2 {
+  font-size: 40px;
+  font-family: 'Ibarra Real Nova', 'sans-serif';
+  margin: 20px 0;
+  text-align: left;
+}
+
+.text__container p {
+  font-family: 'Public sans', 'sans-serif';
+  line-height: 30px;
+  font-size: 1rem;
+  text-align: left;
+  margin: 20px 0 40px;
+  color: #747474;
+}
+
+.skills {
+  margin: 0 0 40px;
+}
+
+.skills span {
+  color: #5fb4a2;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 996px) {
+  .card__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .text__container {
+    width: 100%;
+  }
+  .text__container button {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 996px) {
+  .text__container {
+    width: 90%;
+  }
+  .card__container {
+    grid-template-columns: 40% 60%;
+  }
+  .text__container h2 {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 1270px) {
+  .text__container {
+    width: 90%;
+    padding: 0 30px;
+  }
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .text__container h2 {
+    margin-top: 20px;
+  }
+}
+
+/* PORTFOLIO  */
+
+.card__container__portfolio {
+  margin: 80px 0;
+}
+
+.card__container__portfolio .text__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.card__container__portfolio .img__container {
+  margin: 0;
+}
+
+@media screen and (min-width: 968px) {
+  .card__container__portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .card__container__portfolio .text__container {
+    margin: 0;
+    padding: 0 40px;
+  }
+}
