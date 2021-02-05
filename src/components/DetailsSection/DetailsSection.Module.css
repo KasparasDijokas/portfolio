@@ -16,7 +16,6 @@
 
 .info__summary__container {
   border-top: 3px solid var(--secondary-grey);
-  border-bottom: 3px solid var(--secondary-grey);
   padding: 20px 0;
   display: flex;
   flex-direction: column;

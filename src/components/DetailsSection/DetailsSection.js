@@ -18,7 +18,7 @@ const DetailsSection = ({
   prevLink,
   nextLink,
   github,
-  firebase
+  firebase,
 }) => {
   return (
     <main className={classes.details__container}>
@@ -42,18 +42,10 @@ const DetailsSection = ({
             )}
           </aside>
           <div className={classes.links}>
-            <a
-              href={firebase}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={firebase} target="_blank" rel="noreferrer">
               <Button secondary={true}>{summaryButtonText}</Button>
             </a>
-            <a
-              href={github}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={github} target="_blank" rel="noreferrer">
               <Button secondary={true}>Github</Button>
             </a>
           </div>

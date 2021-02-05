@@ -23,16 +23,20 @@
 
 .icons img {
   cursor: pointer;
-  fill: #fff;
 }
 
 .footer__container img {
   filter: brightness(100);
 }
 
-.facebook {
-  min-width: 25px;
-  min-height: 25px;
+.icons__container a img {
+  width: 25px;
+  height: 25px;
+}
+
+.icons__container a {
+  text-align: center;
+  width: auto;
 }
 
 .footer__container nav {

@@ -6,7 +6,6 @@
 }
 
 /* Modal on mobile */
-
 .mobile__menu {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   width: 100%;
@@ -51,7 +50,6 @@
 }
 
 /* Navigation  */
-
 .mobile__menu nav {
   position: absolute;
   width: 100%;
@@ -69,8 +67,8 @@
 .navbar nav {
   display: none;
 }
-/* Media queries */
 
+/* Media queries */
 @media screen and (min-width: 768px) {
   .hamburger {
     display: none;

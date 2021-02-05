@@ -39,16 +39,17 @@ const Card = (props) => {
         )}
 
         {props.link ? (
-            <a href={props.link} target="_blank" rel="noreferrer" style={{zIndex: "5"}}>
-          <Button secondary={true}>
-              {props.button_text}
-          </Button>
-            </a>
+          <a
+            href={props.link}
+            target="_blank"
+            rel="noreferrer"
+            style={{ zIndex: '5' }}
+          >
+            <Button secondary={true}>{props.button_text}</Button>
+          </a>
         ) : (
           <Link to={props.url}>
-            <Button secondary={true}>
-                {props.button_text}
-            </Button>
+            <Button secondary={true}>{props.button_text}</Button>
           </Link>
         )}
       </div>
