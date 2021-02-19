@@ -7,6 +7,7 @@ import calculator from '../images/javascript/calculatorSmall.png';
 import mealFinderImg from '../images/javascript/mealSmall.jpg';
 import formImg from '../images/javascript/FormSmall.png';
 import Proposal from '../components/Proposal/Proposal';
+import Controls from '../components/Controls/Controls';
 
 const JavaScriptProjects = () => {
   useEffect(() => {
@@ -135,6 +136,12 @@ const JavaScriptProjects = () => {
         portfolio={true}
         link="https://github.com/KasparasDijokas/form-validator"
         skills={FORM.skills}
+      />
+      <Controls
+        prevLink={'dine'}
+        prevText={'Dine Restaurant'}
+        nextLink={'tracker'}
+        nextText={'Bug Tracker'}
       />
       <Proposal />
     </div>
