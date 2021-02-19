@@ -3,6 +3,7 @@ import Card from '../../components/Card/Card';
 import tracker1 from '../../images/portfolio/details/tracker3.png';
 import netflix1 from '../../images/portfolio/details/netflix2.jpg';
 import dine1 from '../../images/portfolio/details/dine2.png';
+import youtube from '../../images/portfolio/details/yt-watch-desktop.png';
 import jsprojects from '../../images/jsprojects.jpg';
 import Proposal from '../../components/Proposal/Proposal';
 
@@ -26,9 +27,15 @@ const Portfolio = () => {
   };
   const DINE = {
     text: `This project was built using HTML5, CSS, and React. I had mobile and desktop designs to work on and created it so that it was fully responsive.
-     I used React hooks and CSS modules, modern CSS like Flexbox and Grid for layout purposes, and react-reveal library for animations.`,
+     I used React hooks and CSS modules, react-reveal library for animations, modern CSS like Flexbox and Grid for layout purposes.`,
     button_text: `VIEW PROJECT`,
     heading: `Dine Restaurant`,
+  };
+  const YOUTUBE = {
+    text: `This project was built using HTML5, SCSS, React and material-ui.
+    I took a mobile-first approach and used modern CSS like Flexbox. For http requests I used axios library.`,
+    button_text: `VIEW PROJECT`,
+    heading: `Youtube`,
   };
   const JS__PROJECTS = {
     text: `These projects were created in pure HTML, CSS, and JavaScript.
@@ -59,10 +66,19 @@ const Portfolio = () => {
         url="/portfolio/netflix"
       />
       <Card
+        text={YOUTUBE.text}
+        heading={YOUTUBE.heading}
+        button_text={YOUTUBE.button_text}
+        image={youtube}
+        portfolio={true}
+        url="/portfolio/youtube"
+      />
+       <Card
         text={DINE.text}
         heading={DINE.heading}
         button_text={DINE.button_text}
         image={dine1}
+        second={true}
         portfolio={true}
         url="/portfolio/dine"
       />
@@ -71,7 +87,6 @@ const Portfolio = () => {
         heading={JS__PROJECTS.heading}
         button_text={JS__PROJECTS.button_text}
         image={jsprojects}
-        second={true}
         portfolio={true}
         url="/portfolio/jsprojects"
       />

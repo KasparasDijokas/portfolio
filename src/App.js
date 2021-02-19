@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Tracker from './pages/Tracker';
 import Dine from './pages/Dine';
+import Youtube from './pages/Youtube';
 import Netflix from './pages/Netflix';
 import JavaScriptProjects from './pages/JavaScriptProjects';
 import Contact from './pages/Contact';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/portfolio/Tracker" component={Tracker}></Route>
           <Route path="/portfolio/Netflix" component={Netflix}></Route>
           <Route path="/portfolio/dine" component={Dine}></Route>
+          <Route path="/portfolio/youtube" component={Youtube}></Route>
           <Route
             path="/portfolio/jsprojects"
             component={JavaScriptProjects}

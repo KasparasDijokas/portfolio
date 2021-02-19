@@ -4,8 +4,10 @@ import Github from '../images/github.svg';
 import Linkedin from '../images/linkedin.svg';
 import Facebook from '../images/facebook-f-brands.svg';
 import Button from '../components/Button/Button';
+import firebase from '../config/firebase';
 
 const Contact = () => {
+  const db = firebase.firestore();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -27,6 +29,12 @@ const Contact = () => {
     success: false,
   });
   const [successMessage, setSuccessMessage] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSuccessMessage(false);
+    }, 3000);
+  }, [successMessage]);
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -57,15 +65,34 @@ const Contact = () => {
           className: classes.error,
           success: true,
         });
-
-    userName.success && userEmail.success && userMessage.success
-      ? setSuccessMessage(true)
-      : setSuccessMessage(false);
-
-    console.log(userName.success);
-    console.log(userEmail.success);
-    console.log(userMessage.success);
   };
+
+  useEffect(() => {
+    if (userName.success && userEmail.success && userMessage.success) {
+      setSuccessMessage(true);
+      db.collection('messages').add({
+        name: userName.value,
+        email: userEmail.value,
+        message: userMessage.value,
+      });
+
+      setUserName({
+        ...userName,
+        value: '',
+      });
+      setUserEmail({
+        ...userEmail,
+        value: '',
+      });
+      setUserMessage({
+        ...userMessage,
+        value: '',
+      });
+    } else {
+      setSuccessMessage(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userName.success, userEmail.success, userMessage.success]);
 
   return (
     <main className={classes.contact__container}>
@@ -121,6 +148,7 @@ const Contact = () => {
                 value: e.target.value,
               })
             }
+            value={userName.value}
           ></input>
           <p className={userName.className}>Please enter your name</p>
           <label htmlFor="email">Email Address</label>
@@ -134,6 +162,7 @@ const Contact = () => {
                 value: e.target.value,
               })
             }
+            value={userEmail.value}
           ></input>
           <p className={userEmail.className}>Please enter valid Email</p>
           <label htmlFor="message">Message</label>
@@ -147,21 +176,22 @@ const Contact = () => {
                 value: e.target.value,
               })
             }
+            value={userMessage.value}
           ></textarea>
           <p className={userMessage.className}>Please enter your question</p>
           <Button secondary={'true'} onClick={formHandler}>
             Send Message
           </Button>
+          <p
+            className={
+              successMessage
+                ? `${classes.success} ${classes.show}`
+                : classes.success
+            }
+          >
+            Thank you! I will contact you as soon as possible!
+          </p>
         </form>
-        <p
-          className={
-            successMessage
-              ? `${classes.success} ${classes.show}`
-              : classes.success
-          }
-        >
-          Thank you! I will contact you as soon as possible!
-        </p>
       </section>
     </main>
   );

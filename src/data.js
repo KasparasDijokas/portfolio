@@ -7,6 +7,8 @@ import netflix4 from './images/portfolio/details/netflix4.jpg';
 import dine1 from './images/portfolio/details/dine1.jpg';
 import dine2 from './images/portfolio/details/dine2.png';
 import dine3 from './images/portfolio/details/dine3.png';
+import youtube3 from './images/portfolio/details/yt-watch-desktop.png';
+import youtube4 from './images/portfolio/details/yt-home-desktop.png';
 
 const data = {
   tracker: {
@@ -54,9 +56,9 @@ const data = {
       'Firestore',
     ],
     prevLink: 'tracker',
-    nextLink: 'dine',
+    nextLink: 'youtube',
     prevText: 'Bug Tracker',
-    nextText: 'Dine Restaurant',
+    nextText: 'Youtube',
           github: "https://github.com/KasparasDijokas/netflix",
       firebase: "https://netflix-f9c47.web.app/signin"
   },
@@ -79,12 +81,37 @@ const data = {
       'Grid',
       'Flexbox',
     ],
-    prevLink: 'netflix',
+    prevLink: 'youtube',
     nextLink: 'jsprojects',
-    prevText: 'Netflix',
+    prevText: 'Youtube',
     nextText: 'JavaScript Projects',
     github: "https://github.com/KasparasDijokas/restaurant",
     firebase: "https://dine-68663.web.app"
+  },
+  youtube: {
+    headerImage: youtube3,
+    summaryHeading: 'Youtube',
+    summaryText: `This project was built using HTML5, SCSS, React and material-ui.
+    I took a mobile-first approach and used modern CSS like Flexbox. For http requests I used axios library.`,
+    summaryButtonText: 'VISIT WEBSITE',
+    descriptionImage_2: youtube4,
+    descriptionImage_3: youtube3,
+    skills: [
+      'React',
+      'HTML5',
+      'SCSS',
+      'JavaScript',
+      'Flexbox',
+      'Axios',
+      'Youtube API',
+      'Material-UI'
+    ],
+    prevLink: 'netflix',
+    nextLink: 'dine',
+    prevText: 'Netflix',
+    nextText: 'Dine restaurant',
+    github: "https://github.com/KasparasDijokas/yt-portfolio",
+    firebase: "https://yt-portfolio-e69bd.web.app/"
   },
 };
 
